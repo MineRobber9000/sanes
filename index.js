@@ -11,14 +11,14 @@ const config = require("./config.json");
 
 app.get(config.http_prefix+"/serverdata.json",function(req,res) {
 	var data = {};
-	const guild = client.guilds.get(502604049825398805);
-	data.name = guild.name;
-	data.count = guild.members.size();
+	const guild = client.guilds.get("502604049825398805");
+	data["name"] = guild.name;
+	data["count"] = guild.members.size;
 	res.send(JSON.stringify(data));
 });
 
 client.on("ready", () => {
-	console.log(`*hacker voice* I'm in!`); 
+	console.log(`*hacker voice* I'm in!`);
 });
 
 client.on("message", async message => {
@@ -30,7 +30,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
 
   if (command=="src") {
-    message.channel.sendMessage("GitHub: https://github.com/MineRobber9000/sanes");
+    message.channel.send("GitHub: https://github.com/MineRobber9000/sanes");
   }
 
 });
