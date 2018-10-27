@@ -1,0 +1,27 @@
+{
+  "name": "sanes",
+  "version": "0.0.1",
+  "description": "A Discord bot that does stupid things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no u\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MineRobber9000/sanes.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Robert \"khuxkm\" Miles <khuxkm@ttm.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MineRobber9000/sanes/issues"
+  },
+  "homepage": "https://github.com/MineRobber9000/sanes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4"
+  }
+}
