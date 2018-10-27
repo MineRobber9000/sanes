@@ -29,7 +29,9 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  if (command=="scream") {}
+  if (command=="src") {
+    message.channel.sendMessage("GitHub: https://github.com/MineRobber9000/sanes");
+  }
 
 });
 
