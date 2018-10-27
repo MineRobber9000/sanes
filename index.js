@@ -49,12 +49,14 @@ client.on("message", async message => {
 		const channel = message.channel;
 		channel.createWebhook("temp saysomething webhook","").then(function (wb) {
 			t = new Discord.WebhookClient(wb.id,wb.token);
-			t.send(randItem(botdata.responses),{username:randItem(botdata.usernames),avatar_url:randItem(botdata.avatars)})
+			t.send(randItem(botdata.responses),{username:randItem(botdata.usernames),avatarURL:randItem(botdata.avatars)})
 			t.delete("no u");
 		}).catch(console.error);
 	}
 
 });
+
+client.on("error",function(err) { console.error(err); });
 
 app.listen(config.http_port,function() { console.log("On port "+config.http_port); });
 
