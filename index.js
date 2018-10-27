@@ -43,7 +43,7 @@ client.on("message", async message => {
 		request("https://khuxkm.tilde.team/sanes/data.json",{json: true},function(err,res,body) {
 			if (err) {console.error(err);} else {
 				botdata = body;
-				console.log(JSON.stringify(botdata));
+//				console.log(JSON.stringify(botdata));
 			}
 		});
 		const channel = message.channel;
