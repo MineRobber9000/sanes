@@ -54,6 +54,12 @@ client.on("message", async message => {
 		}).catch(console.error);
 	}
 
+	if (command=="avatar") {
+		client.fetchUser(args[0]).then(function(user) {
+			message.channel.send("Here's {user.username}'s avatar. "+user.avatarURL);
+		});
+	}
+
 });
 
 client.on("error",function(err) { console.error(err); });
